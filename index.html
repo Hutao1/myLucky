@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>不忘初心，方得始终。</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta property="wb:webmaster" content="9471e8063cf6949a" />
+    <link rel="shortcut icon" href="http://lovejiani.duapp.com/favicon.ico">
+<!--
+
+             Alizee - Moi Lolita 
+
+             是你和我
+             台上
+             悠悠的歌
+             那轻扬的声音
+
+             是你和我
+             灯下
+             点点的光
+             那温和的眼眸 
+
+             是你和我
+             镜前
+             欣欣的舞
+             那灵妙的身姿 
+
+             是你和我
+             身后
+             漫漫的风
+             那飘摇的森林 
+
+             今后的一切
+             是你在天堂众人吟咏下的祈祷
+             留在那森林边上不起眼的小木屋
+             留在那抱着风尘空白泛黄的笔记上
+             没人查看 
+
+             最后的分别
+             是我在心中独自铭刻下的承诺
+             走出那记忆深处最迷茫的小孤坟
+             走在那沐浴阳光可爱娇小的青草上
+             道声再见
+
+(CC) BY-NC-SA   Author:5B4B铅笔
+
+无论在哪条世界线上都会爱上你，这都是Steins;Gate的选择。
+I don't want to lose you.
+https://github.com/kawaiiushio/lovejiani
+---JN520 2nd EDITION ver2.31
+-->
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+    <style type="text/css">
+			a:link,a:visited{text-decoration:none;}
+		</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/garden.js"></script>
+    <script type="text/javascript" src="./js/functions.js"></script>
+	<script type="text/javascript" src="./console.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<!--comments:颜色为浅绿色-->
+				<!--space:右移7px-->
+				<!--keyword:加粗，颜色为红色-->
+				<!--placeholder:右移15px-->
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">*  Encountered very kind of you,</span><br />
+				<span class="space"/><span class="comments">*  I'm glad I met you</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				每天的<span class="keyword">喜怒哀乐</span>都与你诉说<br />
+				每天<span class="keyword">早起</span>的第一件事就是与你早安互道<br />
+				不曾想过这算不算<span class="keyword">喜欢</span><br/>
+                我只知道你很<span class="keyword">重要</span><br/>
+                <span class="keyword">有一天</span>忽然想到<br/>
+                你若<span class="keyword">离去</span>将会怎样<br />
+                <span class="keyword">不敢</span>想象<br />
+                想要和你这样<span class="keyword">一辈子</span><br />
+                <span class="keyword">唯一</span>我能想到的办法<br />
+                就是与你<span class="keyword">白头偕老</span><br />
+                想和你去很多<span class="keyword">地方</span><br />
+                那些你成长的<span class="keyword">角落</span><br />
+                诉说你是如何<span class="keyword">长大</span>;<br />
+                那些你<span class="keyword">想去</span>的地方<br />
+                <span class="keyword">领略</span>风景与美食<br />
+                放进一本<span class="keyword">相册</span><br />
+                老了携手<span class="keyword">回忆</span><br />
+                露出不悔的<span class="keyword">笑容</span><br />
+                想了这么<span class="keyword">多</span><br />
+                <span class="keyword">还是</span>想要和你说<br />
+                <span class="keyword">I</span> love <span class="keyword">u</span>. <br />
+			</div>
+			<div id="loveHeart">
+			  <canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Xiexie, I have met you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						I love you. <br/>
+						<div class="signature"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2016, 12, 7);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "❤  您的浏览器不支持HTML5技术<br/>推荐使用 Chrome/Firefox/Opera 浏览器 喵~ ＞▽＜ "; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
